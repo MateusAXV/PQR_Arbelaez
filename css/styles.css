@@ -1,267 +1,129 @@
-:root {
-    --dark-text-main-color: #ff702a;
-    --dark-text-color: #fff;
-    --dark-text-color-2: #9897a9;
-    --dark-bg-color: #1e1c2a;
-    --dark-bg-color-darker: #181620;
-    --dark-bg-color-3: #332e47;
-    --big-font: 4rem;
-    --h2-font: 2rem;
-    --options-font: 1.1rem;
-    --p-font: 0.9rem;
-    --span-weigth: 600;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
-    list-style: none;
-    text-decoration: none;
-    user-select: none;
-}
-
+/* Estilos generales para el cuerpo de la página */
 body {
-    color: var(--dark-text-color);
-    background-color: var(--dark-bg-color-3);
-}
-
-nav {
-    position: relative;
-    width: 100%;
-    height: 13vh;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--dark-bg-color-darker);
-}
-
-.logo {
-    color: var(--dark-text-main-color);
-    font-weight: 600;
-    font-size: 2.5rem;
-}
-
-#menu-icon {
-    font-size: 2rem;
-    cursor: pointer;
-    display: none;
-}
-
-.profile-area{
-    display: flex;
-}
-
-.profile-area *{
-    display: inline;
-}
-
-main {
-    height: 20vh;
-    width: 100%;
-    display: flex;
-}
-
-aside {
-    width: 20%;
-    height: 100vh;
-    background-color: var(--dark-bg-color);
-}
-section{
-    width: 80%;
-    height: 100vh;
-}
-/* -------------------------------------------------------------------- */
-
-img {
-    pointer-events: none;
-}
-
-.a-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: var(--dark-text-main-colorcolor);
-    color: var(--dark-text-color);
-    border-radius: .5rem;
-    box-shadow: 2px 2px 2px 0 rgba(255, 112, 42, .5);
-    transition: transform 400ms ease;
-}
-
-.a-btn:hover {
-    transform: scale(1.1);
-}
-
-/* -------------------------------------------------------------------- */
-
-/* Footer */
-
-footer {
-    padding: 50px 14vw 20px;
-    background-color: var(--bg-dark-color);
-}
-
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.column {
-    width: 25%;
-}
-
-.column h4 {
-    font-size: 1.2rem;
-    color: var(--text-color);
-    margin-bottom: 25px;
-    position: relative;
-}
-
-.column h4::before {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 50px;
-    left: 0;
-    bottom: -4px;
-    background-color: var(--main-color);
-}
-
-.column ul li:not(last-child) {
-    margin-bottom: 5px;
-}
-
-.column ul li a {
-    color: var(--text-secondary-color);
-    font-size: 1rem;
-    display: block;
-    text-transform: capitalize;
-    transition: transform 300ms ease;
-}
-
-.column ul li a:hover {
-    color: var(--text-color);
-    transform: translateX(-12px);
-}
-
-.column .social {
-    width: 220px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.column .social a {
-    width: 40px;
-    height: 40px;
-    background-color: var(--main-color);
-    color: var(--text-color);
-    align-items: center;
-    display: inline-flex;
     justify-content: center;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    transition: transform 400ms ease;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-.column .social a:hover {
-    transform: scale(1.2);
-    color: var(--bg-color);
-    background-color: var(--text-color);
+/* Estilos para el contenedor principal del formulario de inicio de sesión */
+.login-container {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
 }
 
-/* Responsive */
-
-@media (max-width: 1560px) {
-    :root {
-        --big-font: 3.5rem;
-        --h2-font: 2rem;
-    }
-
-    nav {
-        padding: 15px 40px;
-    }
+/* Estilos para el título "Login" */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-@media (max-width: 1140px) {
-    #menu-icon {
-        display: initial;
-        color: var(--dark-text-color);
-    }
-
-    main>section {
-        padding: 50px 8%;
-    }
-
-    header .nav-options {
-        position: absolute;
-        top: -400px;
-        left: 0;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        background: var(--dark-bg-color-3);
-        transition: 300ms;
-    }
-
-    header .active {
-        top: 70px;
-    }
-
-    .nav-options a {
-        margin: 1.5rem;
-        display: block;
-    }
-
-    .column {
-        width: 50%;
-        margin-bottom: 10px;
-    }
+/* Estilos para el formulario */
+form {
+    display: flex;
+    flex-direction: column;
 }
 
-@media (max-width: 720px) {
-    main {
-        padding: 0;
-    }
-
-    header {
-        padding: 10px 16px;
-    }
-
-    .home,
-    .about {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .about-img {
-        display: none;
-    }
-
-    main>section {
-        padding: 100px 7%;
-    }
+/* Estilos para los grupos de formularios (Usuario y Contraseña) */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
 }
 
-@media (max-width: 720px) {
-    :root {
-        --big-font: 3rem;
-        --h2-font: 1.7rem;
-    }
-
-    body section {
-        margin: 0;
-        scroll-margin-top: 0vh;
-    }
-
-    .column {
-        width: 100%;
-    }
-
-    nav {
-        height: 70px;
-        padding: 0 30px;
-    }
+/* Estilos para las etiquetas de los campos de entrada */
+label {
+    display: block;
+    font-weight: bold;
 }
+
+/* Estilos para los campos de entrada */
+input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilos para el botón de inicio de sesión */
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el enlace de registro */
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para la caja de mensaje con tamaño fijo y barra de desplazamiento */
+textarea#mensaje {
+    width: 500px; /* Ancho fijo de 500 píxeles */
+    height: 500px; /* Altura fija de 500 píxeles */
+    resize: both; /* Permite redimensionar la caja en ambas direcciones */
+    overflow: auto; /* Agrega una barra de desplazamiento cuando el contenido excede el tamaño */
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para el campo de texto y los botones en la columna izquierda */
+.left-column .text-input {
+    width: 120px;
+    margin-right: 10px;
+}
+
+/* Estilos para la tabla en la columna derecha */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
