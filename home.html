@@ -1,77 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Enlazar el archivo CSS para aplicar estilos -->
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Página de Inicio</title>
-</head>
-<body>
-    <!-- Contenedor principal para la página de inicio con dos columnas -->
-    <div class="home-container">
-        <!-- Columna izquierda con los tres botones alineados verticalmente -->
-        <div class="left-column">
-            <!-- Botón para la opción "Usuarios" -->
-            <button id="usuarios-btn" class="vertical-button">Usuarios</button>
-            <!-- Botón para la opción "Clientes" -->
-            <button id="clientes-btn" class="vertical-button">Clientes</button>
-            <!-- Botón para la opción "Acerca de" -->
-            <button id="acerca-de-btn" class="vertical-button">Acerca de</button>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Enlazar el archivo CSS para aplicar estilos -->
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Página de Inicio</title>
+    </head>
+    <body>
+        <!-- Contenedor principal para la página de inicio con dos columnas -->
+        <div class="home-container">
+            <!-- Columna izquierda con los tres botones alineados verticalmente -->
+            <div class="left-column">
+
+                <!-- Botón para la opción "Usuarios" -->
+                <button id="usuarios-btn" class="vertical-button">Usuarios</button>
+                <!-- Botón para la opción "Clientes" -->
+                <button id="clientes-btn" class="vertical-button">Clientes</button>
+                <!-- Botón para la opción "Acerca de" -->
+                <a href="acercade.html"><button id="acerca-de-btn"
+                        class="vertical-button">Acerca de</button></a>
+                <!-- Enlace para regresar al index -->
+                <a href="index.html"><button id="salir-btn"
+                        class="vertical-button">Salir</button></a>
+            </div>
+
+            <!-- Columna derecha con la tabla y otros elementos -->
+            <div>
+                <!-- Campo de texto para consultar PQRS por ID a la izquierda del botón -->
+                <input type="text" id="pqrs-id" class="text-input"
+                    placeholder="ID de PQRS">
+                <button id="consultar-btn">Consultar por ID</button>
+                <!-- Enlace para ir al formulario de creación de PQRS -->
+                <a href="formulario.html"><button id="crear-btn">Crear PQRS</button></a>
+
+                <!-- Tabla para mostrar información de PQRS con 15 filas en blanco -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tipo</th>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Documento</th>
+                            <th>Número de Documento</th>
+                            <th>Teléfono</th>
+                            <th>Mensaje</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Fila 1 -->
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
         </div>
-
-        <!-- Columna derecha con la tabla y otros elementos -->
-        <div>
-            <!-- Campo de texto para consultar PQRS por ID a la izquierda del botón -->
-            <input type="text" id="pqrs-id" class="text-input" placeholder="ID de PQRS">
-            <button id="consultar-btn">Consultar por ID</button>
-            <!-- Enlace para ir al formulario de creación de PQRS -->
-            <a href="formulario.html"><button id="crear-btn">Crear PQRS</button></a>
-            <!-- Enlace para regresar al index -->
-            <a href="index.html"><button id="salir-btn">Salir</button></a>
-
-            <!-- Tabla para mostrar información de PQRS con 15 filas en blanco -->
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Tipo</th>
-                        <th>Nombre</th>
-                        <th>Correo</th>
-                        <th>Documento</th>
-                        <th>Número de Documento</th>
-                        <th>Teléfono</th>
-                        <th>Mensaje</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Fila 1 -->
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-
-                    <!-- Fila 2 -->
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <!-- Puedes agregar más filas en blanco según tus necesidades -->
-                </tbody>
-            </table>
-        </div>
-    </div>
-</body>
+    </body>
 </html>

@@ -106,12 +106,13 @@ th {
 .left-column .vertical-button {
     margin: 10px 0;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #ff9d00;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-right: 50px; /* Añade un margen a la derecha para separar de la columna derecha */
+    width: 150px; /* Ancho fijo de 150 píxeles */
 }
 
 /* Estilos adicionales para el contenedor principal y la columna derecha */
