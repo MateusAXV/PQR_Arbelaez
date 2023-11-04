@@ -10,20 +10,26 @@
 <body>
     <!-- Contenedor principal para la página de inicio con dos columnas -->
     <div class="home-container">
-        <!-- Columna izquierda -->
+        <!-- Columna izquierda con los tres botones alineados verticalmente -->
         <div class="left-column">
-           
+            <!-- Botón para la opción "Usuarios" -->
+            <button id="usuarios-btn" class="vertical-button">Usuarios</button>
+            <!-- Botón para la opción "Clientes" -->
+            <button id="clientes-btn" class="vertical-button">Clientes</button>
+            <!-- Botón para la opción "Acerca de" -->
+            <button id="acerca-de-btn" class="vertical-button">Acerca de</button>
+        </div>
+
+        <!-- Columna derecha con la tabla y otros elementos -->
+        <div>
             <!-- Campo de texto para consultar PQRS por ID a la izquierda del botón -->
             <input type="text" id="pqrs-id" class="text-input" placeholder="ID de PQRS">
             <button id="consultar-btn">Consultar por ID</button>
-            <!-- Botón para crear un nuevo PQRS -->
-            <button id="crear-btn">Crear PQRS</button>
-            <!-- Botón para salir de la página de inicio -->
-            <button id="salir-btn">Salir</button>
-        </div>
+            <!-- Enlace para ir al formulario de creación de PQRS -->
+            <a href="formulario.html"><button id="crear-btn">Crear PQRS</button></a>
+            <!-- Enlace para regresar al index -->
+            <a href="index.html"><button id="salir-btn">Salir</button></a>
 
-        <!-- Columna derecha con la tabla -->
-        <div>
             <!-- Tabla para mostrar información de PQRS con 15 filas en blanco -->
             <table>
                 <thead>
