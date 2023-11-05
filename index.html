@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Enlazar el archivo CSS para aplicar estilos -->
-        <link rel="stylesheet" href="css/styles.css">
-        <title>Iniciar Sesión</title>
-    </head>
-    <body>
-        <!-- Contenedor principal para el formulario de inicio de sesión -->
-        <div class="login-container">
-            <h1>Login</h1> <!-- Título de la página de inicio de sesión -->
 
-            <!-- Formulario de inicio de sesión -->
-            <form>
-                <div class="form-group">
-                    <label for="username">Usuario:</label>
-                    <!-- Campo de entrada para el nombre de usuario -->
-                    <input type="text" id="username" name="username"
-                        placeholder="Nombre de usuario" required>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlazar el archivo CSS para aplicar estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Iniciar Sesión</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
 
-                <div class="form-group">
-                    <label for="password">Contraseña:</label>
-                    <!-- Campo de entrada para la contraseña -->
-                    <input type="password" id="password" name="password"
-                        placeholder="Contraseña" required>
-                </div>
+<body>
+    <!-- Contenedor principal para el formulario de inicio de sesión -->
+    <div class="login-container">
+        <h1>Login</h1> <!-- Título de la página de inicio de sesión -->
+        <!-- Formulario de inicio de sesión -->
+        <form>
+            <div class="form-group">
+                <label for="username">Usuario:</label>
+                <!-- Campo de entrada para el nombre de usuario -->
+                <input type="text" id="username" name="username" placeholder="Cédula de usuario" required>
+                <i class='bx bxs-user' ></i>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <!-- Campo de entrada para la contraseña -->
+                <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
 
-                <!-- Botón para enviar el formulario -->
-                <button type="submit">Entrar</button>
-            </form>
+            <!-- Botón para enviar el formulario -->
+            <button type="submit">Entrar</button>
+        </form>
+        <!-- Enlace para registrarse (debe vincularse a la página de registro) -->
+        <p>¿No tienes una cuenta? <a href="registro.html">Regístrate</a></p>
+    </div>
+</body>
 
+<<<<<<< HEAD
             <!-- Enlace para registrarse (debe vincularse a la página de registro) -->
             <p>¿No tienes una cuenta? <a href="registro.html">Regístrate</a></p>
         </div>
     </body>
+=======
+>>>>>>> e2ec4bdbd78782ac7eed998ee4cd90b5ce005243
 </html>
