@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css"> <!-- Enlaza tu archivo CSS -->
     <title>Formulario de Registro</title>
 </head>
+
 <body>
     <div class="registration-container">
         <h1>Formulario de Registro</h1> <!-- Título del formulario -->
@@ -13,26 +15,41 @@
         <form>
             <!-- Campo para el nombre de usuario -->
             <div class="form-group">
-                <label for="nombre-usuario">Nombre de Usuario:</label>
-                <input type="text" id="nombre-usuario" name="nombre-usuario" placeholder="Nombre de usuario" required>
+                <label for="nombre-usuario">Tipo de documento:</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="peticion">Selecciona --</option>
+                    <option value="peticion">Tarjeta de Identidad</option>
+                    <option value="queja">Cédula de Ciudadanía</option>
+                </select>
+                <!-- <input type="text" id="nombre-usuario" name="nombre-usuario" placeholder="Nombre de usuario" required> -->
             </div>
-
+            <!-- Campo para el número de cédula/tarjeta -->
+            <div class="form-group">
+                <label for="nombre">Número de C.C/T.I:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa el numero" required>
+            </div>
             <!-- Campo para el nombre completo -->
             <div class="form-group">
                 <label for="nombre">Nombre Completo:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
             </div>
 
             <!-- Campo para el correo electrónico -->
             <div class="form-group">
-                <label for="correo">Correo Electrónico:</label>
-                <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required>
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" placeholder="correo@outlook.com" required>
             </div>
-
+            
             <!-- Campo para el número de teléfono -->
             <div class="form-group">
                 <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono">
+                <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu número de teléfono">
+            </div>
+
+            <!-- Campo para crear la contraseña nueva (4 números) -->
+            <div class="form-group">
+                <label for="correo">Crear nueva contraseña:</label>
+                <input type="email" id="correo" name="correo" placeholder="Crea una contraseña de 4 números" required>
             </div>
 
             <!-- Botón para enviar el formulario de registro -->
@@ -43,4 +60,5 @@
         </form>
     </div>
 </body>
+
 </html>
