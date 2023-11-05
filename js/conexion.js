@@ -1,28 +1,18 @@
-var mysql = require('mysql');
+const express = require("express");
 
-var conexion = mysql.createConnection({
+const app = express();
 
-    host: 'localhost',
-    database: 'pqrs_db',
-    user: 'root',
-    password: ''
+app.get("/", function(req,res){
+    res.send('hola a todos');
 });
 
-conexion.connect(function (error) {
+app.listen(3000,function(){
 
-    if (error) {
-        throw error;
-    } else {
-        console.log('Conexion Exitosa');
-    }
+    console.log("servidor creado http://localhost:3000");
 });
 
-conexion.query('SELECT * FROM registros', function (error, results, fields) {
-    if (error) throw error;   // Si hay un error en la consulta SQL
-    results.forEach(result => {
-        console.log(result)
-    });
-});
+// app.post("/validar", function(req,res){
 
-conexion.end();
-// No borrar
+//     const datos = req.body;
+//     console.log(datos);
+// });
