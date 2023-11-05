@@ -13,7 +13,7 @@ conexion.connect(function (error) {
     if (error) {
         throw error;
     } else {
-        console.log('Conexion exitosa');
+        console.log('Conexion Exitosa');
     }
 });
 
