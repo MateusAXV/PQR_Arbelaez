@@ -25,3 +25,4 @@ conexion.query('SELECT * FROM registros', function (error, results, fields) {
 });
 
 conexion.end();
+// No borrar
