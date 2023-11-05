@@ -1,6 +1,6 @@
 *,
 *::after,
-*::before{
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,7 +20,8 @@ body {
     margin: 0;
 }
 
-/* Estilos para el contenedor principal del formulario de inicio de sesión */
+/* =======================================LOGIN============================================== */
+
 .login-container {
     position: relative;
     background-color: transparent;
@@ -70,13 +71,12 @@ input {
     border-radius: 10px;
 }
 
-input::placeholder{
+input::placeholder {
     color: rgb(255, 255, 255);
 }
 
-
 /* iconos */
-.form-group i{
+.form-group i {
     position: absolute;
     right: 7px;
     top: 50%;
@@ -98,27 +98,67 @@ button:hover {
     background-color: rgb(205, 205, 205);
 }
 
-/* Estilos para el enlace de registro */
-a {
-    text-decoration: none;
-    color: #007BFF;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-p{
+p {
     font-size: .9rem;
     color: 2px solid rgba(255, 255, 255, 0.5);
 }
 
+/* =======================================REGISTRO============================================== */
+
+.registration-container {
+    position: relative;
+    background-color: transparent;
+    padding: 30px 40px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 500px;
+    backdrop-filter: blur(15px);
+}
+
+select {
+    background: transparent;
+    padding: 0.3rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    width: 60%;
+}
+
+select option {
+    background: #fff;
+    color: #555;
+    border: none;
+    padding: 0.2rem;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #bbb;
+}
+
+/* =======================================NOSE============================================== */
+
 /* Estilos para la caja de mensaje con tamaño fijo y barra de desplazamiento */
 textarea#mensaje {
-    width: 500px; /* Ancho fijo de 500 píxeles */
-    height: 500px; /* Altura fija de 500 píxeles */
-    resize: both; /* Permite redimensionar la caja en ambas direcciones */
-    overflow: auto; /* Agrega una barra de desplazamiento cuando el contenido excede el tamaño */
+    width: 500px;
+    /* Ancho fijo de 500 píxeles */
+    height: 500px;
+    /* Altura fija de 500 píxeles */
+    resize: both;
+    /* Permite redimensionar la caja en ambas direcciones */
+    overflow: auto;
+    /* Agrega una barra de desplazamiento cuando el contenido excede el tamaño */
 }
 
 /* Estilos para la tabla */
@@ -128,11 +168,14 @@ table {
     margin-top: 20px;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 2px solid #0056b3;
 }
 
-th, td {
+th,
+td {
     padding: 8px;
     text-align: left;
 }
@@ -150,8 +193,10 @@ th {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-right: 50px; /* Añade un margen a la derecha para separar de la columna derecha */
-    width: 150px; /* Ancho fijo de 150 píxeles */
+    margin-right: 50px;
+    /* Añade un margen a la derecha para separar de la columna derecha */
+    width: 150px;
+    /* Ancho fijo de 150 píxeles */
 }
 
 /* Estilos adicionales para el contenedor principal y la columna derecha */
@@ -172,6 +217,8 @@ th {
 
 /* Estilos para el campo de texto y su botón en la columna izquierda */
 .text-input {
-    width: auto; /* Ancho automático para ajustarse al contenido */
-    margin-right: 10px; /* Añade un margen a la derecha para separar del botón */
+    width: auto;
+    /* Ancho automático para ajustarse al contenido */
+    margin-right: 10px;
+    /* Añade un margen a la derecha para separar del botón */
 }
