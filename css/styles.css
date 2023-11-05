@@ -17,58 +17,24 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
 }
 
-/* =======================================LOGIN============================================== */
-
-.login-container {
-    position: relative;
-    background-color: transparent;
-    padding: 30px 40px;
-    border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    width: 360px;
-    backdrop-filter: blur(15px);
-}
-
-.login-container a{
-    color: rgb(255, 166, 0);
-}
-
-.login-container a:hover{
-    text-decoration: underline;
-}
-
-/* Estilos para el título "Login" */
 h1 {
     font-size: 24px;
     margin-bottom: 20px;
 }
 
-/* Estilos para el formulario */
 form {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-/* Estilos para los grupos de formularios (Usuario y Contraseña) */
-.form-group {
-    position: relative;
-    margin-bottom: 15px;
-    text-align: left;
-    width: 100%;
-}
-
-/* Estilos para las etiquetas de los campos de entrada */
 label {
     font-weight: bold;
 }
 
-input{
+input {
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.5);
     outline: none;
@@ -77,22 +43,7 @@ input{
 input::placeholder {
     color: rgb(255, 255, 255);
 }
-/* Estilos para los campos de entrada */
-.form-group input {
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    border-radius: 10px;
-}
 
-
-/* iconos */
-.form-group i {
-    position: absolute;
-    right: 7px;
-    top: 50%;
-    transform: translateY(10%);
-}
 
 button {
     background-color: rgb(255, 255, 255);
@@ -106,40 +57,11 @@ button:hover {
     background-color: rgb(205, 205, 205);
 }
 
-/* Estilos para el botón de inicio de sesión */
-.login-container button {
-    padding: 10px;
-    margin-bottom: 1rem;
-}
-
 p {
     font-size: .9rem;
     color: 2px solid rgba(255, 255, 255, 0.5);
 }
 
-/* =======================================REGISTRO============================================== */
-
-.registration-container {
-    position: relative;
-    background-color: transparent;
-    padding: 30px 40px;
-    border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    width: 500px;
-    backdrop-filter: blur(15px);
-}
-
-.registration-container button{
-    padding: 10px;
-    margin-bottom: 1rem;
-}
-
-.registration-container a:hover{
-    color: rgb(255, 166, 0);
-    text-decoration: underline;
-}
 
 select {
     background: transparent;
@@ -166,6 +88,98 @@ a {
     text-decoration: none;
 }
 
+
+textarea {
+    width: 500px;
+    /* Ancho fijo de 500 píxeles */
+    height: 450px;
+    /* Altura fija de 500 píxeles */
+    resize: both;
+    /* Permite redimensionar la caja en ambas direcciones */
+    overflow: auto;
+    /* Agrega una barra de desplazamiento cuando el contenido excede el tamaño */
+    color: #000;
+}
+/* =======================================LOGIN============================================== */
+
+.login-container {
+    position: relative;
+    background-color: transparent;
+    padding: 30px 40px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 360px;
+    backdrop-filter: blur(15px);
+}
+
+.login-container a {
+    color: rgb(255, 166, 0);
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para los grupos de formularios (Usuario y Contraseña) */
+.form-group {
+    position: relative;
+    margin-bottom: 15px;
+    text-align: left;
+    width: 100%;
+}
+
+/* Estilos para los campos de entrada */
+.form-group input {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* iconos */
+.form-group i {
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    transform: translateY(10%);
+}
+
+
+/* Estilos para el botón de inicio de sesión */
+.login-container button {
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+
+/* =======================================REGISTRO============================================== */
+
+.registration-container {
+    position: relative;
+    background-color: transparent;
+    padding: 30px 40px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 500px;
+    backdrop-filter: blur(15px);
+}
+
+.registration-container button {
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+.registration-container a {
+    color: rgb(255, 166, 0);
+}
+
+.registration-container a:hover {
+    text-decoration: underline;
+}
 /* =======================================HOME============================================== */
 
 
@@ -202,6 +216,12 @@ a {
     cursor: pointer;
     text-align: center;
     width: 150px;
+    transition: transform 200ms;
+}
+
+.left-column .vertical-button:hover{
+    background-color: rgb(212, 138, 0);
+    transform: scale(1.05);
 }
 
 .home-container .right-column {
@@ -210,10 +230,11 @@ a {
 
 .right-column button {
     padding: .5rem;
+    margin-right: 1rem;
+    transition: transform 200ms;
 }
-
-button:hover {
-    background-color: rgb(205, 205, 205);
+.right-column button:hover {
+    transform: scale(1.05);
 }
 
 .id-input {
@@ -245,19 +266,6 @@ th {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-
-
-/* Estilos para la caja de mensaje con tamaño fijo y barra de desplazamiento */
-textarea#mensaje {
-    width: 500px;
-    /* Ancho fijo de 500 píxeles */
-    height: 500px;
-    /* Altura fija de 500 píxeles */
-    resize: both;
-    /* Permite redimensionar la caja en ambas direcciones */
-    overflow: auto;
-    /* Agrega una barra de desplazamiento cuando el contenido excede el tamaño */
-}
 
 /* =======================================ABOUT============================================== */
 
@@ -294,7 +302,8 @@ textarea#mensaje {
 /* =======================================USERS============================================== */
 
 .users-container,
-.admins-container{
+.admins-container,
+.pqrs-view-container {
     position: relative;
     background-color: transparent;
     padding: 30px 40px;
@@ -306,6 +315,30 @@ textarea#mensaje {
 }
 
 .users-container button,
-.admins-container button{
+.admins-container button {
     padding: .5rem;
+}
+
+/* =======================================CONSULTAS============================================ */
+
+.pqrs-view-container {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pqrs-view-container form{
+    width: 100%;
+}
+
+.pqrs-view-container button {
+    padding: 10px;
+}
+
+.pqrs-view-container a {
+    color: rgb(255, 166, 0);
+}
+.pqrs-view-container a:hover {
+    text-decoration: underline;
 }
