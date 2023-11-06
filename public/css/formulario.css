@@ -10,7 +10,7 @@
 /* Estilos generales para el cuerpo de la página */
 body {
     font-family: Arial, sans-serif;
-    background-image: url(../assets/img/bg-index.jpg);
+    background-image: url(../img/bg-index.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
