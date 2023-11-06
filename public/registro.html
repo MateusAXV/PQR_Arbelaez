@@ -13,11 +13,11 @@
     <div class="registration-container">
         <h1>Formulario de Registro</h1> <!-- Título del formulario -->
 
-        <form>
+        <form action="/validar" method="post">
             <!-- Campo para el nombre de usuario -->
             <div class="form-group">
                 <label for="nombre-usuario">Tipo de documento:</label>
-                <select id="tipo" name="tipo" required>
+                <select id="tipodoc" name="tipodoc" required>
                     <option disabled hidden selected value="">Seleccione una opción</option>
                     <option value="TI">Tarjeta de Identidad</option>
                     <option value="CC">Cédula de Ciudadanía</option>
@@ -28,12 +28,12 @@
             <!-- Campo para el número de cédula/tarjeta -->
             <div class="form-group">
                 <label for="number">Número de C.C/T.I:</label>
-                <input type="number" id="number" name="number" placeholder="Ingresa el numero" required>
+                <input type="number" id="numerodoc" name="numerodoc" placeholder="Ingresa el numero" required>
             </div>
             <!-- Campo para el nombre completo -->
             <div class="form-group">
                 <label for="nombre">Nombre Completo:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
+                <input type="text" id="nombreregistro" name="nombreregistro" placeholder="Ingresa tu nombre completo" required>
             </div>
 
             <!-- Campo para el correo electrónico -->
@@ -45,13 +45,13 @@
             <!-- Campo para el número de teléfono -->
             <div class="form-group">
                 <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu número de teléfono">
+                <input type="tel" id="celular" name="celular" placeholder="Ingresa tu número de teléfono">
             </div>
 
             <!-- Campo para crear la contraseña nueva (4 números) -->
             <div class="form-group">
                 <label for="password">Crear nueva contraseña:</label>
-                <input type="password" id="password" name="password" placeholder="Crea una contraseña de 4 números" required>
+                <input type="password" id="passwordlogin" name="passwordlogin" placeholder="Crea una contraseña de 4 números" required>
             </div>
 
             <!-- Botón para enviar el formulario de registro -->
