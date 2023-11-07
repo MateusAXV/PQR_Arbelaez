@@ -29,6 +29,7 @@
                 <label for="number">Número de C.C/T.I:</label>
                 <input type="number" id="numerodoc" name="numerodoc" placeholder="Ingresa el numero" required>
             </div>
+            
             <!-- Campo para el nombre completo -->
             <div class="form-group">
                 <label for="nombre">Nombre Completo:</label>
@@ -44,7 +45,7 @@
             <!-- Campo para el número de teléfono -->
             <div class="form-group">
                 <label for="telefono">Teléfono:</label>
-                <input type="tel" id="celular" name="celular" placeholder="Ingresa tu número de teléfono">
+                <input type="tel" id="celular" name="celular" placeholder="Ingresa tu número de teléfono" required>
             </div>
 
             <!-- Campo para crear la contraseña nueva (4 números) -->
@@ -57,10 +58,22 @@
             <button type="submit">Registrar</button>
             <!-- Enlace "Volver" para regresar a la página de inicio -->
             <a href="/">Volver</a>
-        </form> 
-
-        
+        </form>    
+     <!-- esta parte es para el recuadro de error de la cédula registrada -->
     </div>
+    <% if (typeof error !== 'undefined' && error !== null) { %>
+        <div class="error-container" id="error-container">
+            <!-- Muestra el mensaje de error -->
+            <h1 class="error"> <%= error %> </h1>
+            <button onclick="ocultarError()">Aceptar</button>
+        </div>
+    <% } %>
+    <!-- Script para manejar la respuesta después de enviar el formulario -->
 </body>
-
+<script>
+    // Función para ocultar la sección de error
+    function ocultarError() {
+        document.getElementById("error-container").style.display = "none";
+    }
+</script>
 </html>

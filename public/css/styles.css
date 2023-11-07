@@ -156,7 +156,8 @@ textarea {
 
 /* =======================================REGISTRO============================================== */
 
-.registration-container {
+.registration-container,
+.error-container {
     position: relative;
     background-color: transparent;
     padding: 30px 40px;
@@ -180,6 +181,16 @@ textarea {
 .registration-container a:hover {
     text-decoration: underline;
 }
+
+.error-container{
+    position: absolute;
+    width: 300px;
+}
+
+.error-container button{
+    padding: .5rem 1rem;
+}
+
 /* =======================================HOME============================================== */
 
 

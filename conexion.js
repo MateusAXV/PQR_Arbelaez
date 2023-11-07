@@ -55,8 +55,10 @@ app.post("/registrar", function (req, res) {
       throw error;
     } else {
       if (row.length > 0) {
-      
-       console.log("Cedula duplicada");
+        
+        // Error
+        let mensajeError = "El número de documento ya está registrado.";
+        res.render("registro", { error: mensajeError });
 
       } else {
         let registrar =
@@ -79,6 +81,7 @@ app.post("/registrar", function (req, res) {
             throw error;
           } else {
             console.log("Datos almacenados");
+            res.redirect("/"); // Puedes redirigir a la página principal o a otra página después de un registro exitoso
           }
         });
       }
