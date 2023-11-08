@@ -55,11 +55,8 @@ app.post("/registrar", function (req, res) {
       throw error;
     } else {
       if (row.length > 0) {
-        
         // Error
-        let mensajeError = "El número de documento ya está registrado.";
-        res.render("registro", { error: mensajeError });
-
+        res.render("registro", { error: "Cédula duplicada" });
       } else {
         let registrar =
           "INSERT INTO registros (Tipo_documento, Numero_documento, Nombre_Completo, Correo, Celular, Contraseña) VALUES ('" +

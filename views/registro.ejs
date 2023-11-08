@@ -61,19 +61,17 @@
         </form>    
      <!-- esta parte es para el recuadro de error de la cédula registrada -->
     </div>
-    <% if (typeof error !== 'undefined' && error !== null) { %>
+    <% if (typeof error !== 'undefined') { %>
         <div class="error-container" id="error-container">
             <!-- Muestra el mensaje de error -->
             <h1 class="error"> <%= error %> </h1>
             <button onclick="ocultarError()">Aceptar</button>
         </div>
     <% } %>
-    <!-- Script para manejar la respuesta después de enviar el formulario -->
+
+    <script>
+        // funcion de ocultar el div de cédula repetida
+        ocultarError =()=> document.getElementById("error-container").style.display = "none";
+    </script>
 </body>
-<script>
-    // Función para ocultar la sección de error
-    function ocultarError() {
-        document.getElementById("error-container").style.display = "none";
-    }
-</script>
 </html>
