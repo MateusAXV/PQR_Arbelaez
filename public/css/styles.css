@@ -217,6 +217,15 @@ textarea {
     align-items: center;
 }
 
+.left-column button {
+    padding: .5rem;
+    margin-right: 1rem;
+    transition: transform 200ms;
+}
+.left-column button:hover {
+    transform: scale(1.05);
+}
+
 /* Estilos para los botones de la columna izquierda */
 .left-column .vertical-button {
     margin: 10px 0;
@@ -239,14 +248,7 @@ textarea {
     width: 77%;
 }
 
-.right-column button {
-    padding: .5rem;
-    margin-right: 1rem;
-    transition: transform 200ms;
-}
-.right-column button:hover {
-    transform: scale(1.05);
-}
+
 
 .id-input {
     width: auto;
