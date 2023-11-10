@@ -15,7 +15,7 @@
     <div class="login-container">
         <h1>Login</h1>
         <!-- Formulario de inicio de sesión -->
-        <form>
+        <form action="/inicio" method="post">
             <div class="form-group">
                 <label for="username">Usuario:</label>
                 <!-- Campo de entrada para el nombre de usuario -->
@@ -32,9 +32,19 @@
             <!-- Botón para enviar el formulario -->
             <button type="submit">Entrar</button>
         </form>
+        <% if (typeof errorlogin !== 'undefined') { %>
+            <div class="error-container" id="error-container">
+                <!-- Muestra el mensaje de error -->
+                <h1 class="error"> <%= errorlogin %> </h1>
+                <button onclick="ocultarError()">Aceptar</button>
+            </div>
+        <% } %>
+        <script>
+            // funcion de ocultar el div de error de login.
+            ocultarError =()=> document.getElementById("error-container").style.display = "none";
+        </script>
         <!-- Enlace para registrarse (debe vincularse a la página de registro) -->
         <p>¿No tienes una cuenta? <a href="/registro">Regístrate</a></p>
-        <a href="home.html">Regístrate</a>
     </div>
 </body>
 
