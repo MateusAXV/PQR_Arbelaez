@@ -33,6 +33,10 @@ app.get("/home", (req, res) => {
   res.render("home");
 });
 
+app.get("/formulario", (req, res) => {
+  res.render("formulario");
+});
+
 // se usan para codificar los datos que mandan los html
 app.use(express.json());
 //declarar las variables de un html para el js codificar los datos del html
@@ -46,7 +50,7 @@ app.post("/inicio", function (req, res) {
   let contralogin = datoslogin.pass_login;
 
   let LoginQuery = `SELECT Numero_documento, Contraseña FROM registros WHERE Numero_documento = '${numdoclogin}' AND Contraseña = '${contralogin}';`;
- 
+
   conexion.query(LoginQuery, function (error, row) {
     if (error) {
       throw error;
@@ -54,7 +58,7 @@ app.post("/inicio", function (req, res) {
       if (row.length > 0) {
         res.render("home");
       } else {
-        res.render("index", {errorlogin: "Datos no válidos"});
+        res.render("index", { errorlogin: "Datos no válidos" });
       }
     }
   });
@@ -72,7 +76,7 @@ app.post("/registrar", function (req, res) {
   let celular = datosregistro.celular;
   let contra = datosregistro.passwordlogin;
 
-  let buscarprimarykey = `SELECT Numero_documento, Contraseña FROM registros`;
+  let buscarprimarykey = `SELECT * FROM registros WHERE Numero_documento = ${numdoc}`;
 
   conexion.query(buscarprimarykey, function (error, row) {
     if (error) {
@@ -106,6 +110,31 @@ app.post("/registrar", function (req, res) {
           }
         });
       }
+    }
+  });
+});
+
+//Validar inicio de sesión //Ruta de llegada de datos para el login.
+app.post("/enviarformulario", function (req, res) {
+  const datosformulario = req.body;
+  let tipopqrs = datosformulario.tipopqrs;
+  let asunto = datosformulario.asunto;
+  let mensajepqrs = datosformulario.mensajepqrs;
+
+  let registrarformulario =
+    "INSERT INTO tabla_pqrs (Tipo_Pqrs, Asunto, Mensaje) VALUES ('" +
+    tipopqrs +
+    "','" +
+    asunto +
+    "','" +
+    mensajepqrs +
+    "')";
+
+  conexion.query(registrarformulario, function (error) {
+    if (error) {
+      throw error;
+    } else {
+      res.redirect("home"); // Puedes redirigir a la página principal o a otra página después de un registro exitoso
     }
   });
 });

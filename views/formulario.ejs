@@ -13,11 +13,11 @@
             <h1>Formulario PQRS</h1> <!-- Título del formulario -->
 
             <!-- Formulario de PQRS -->
-            <form>
+            <form action="/enviarformulario" method="post">
                 <!-- Campo para seleccionar el tipo de solicitud -->
                 <div class="form-group">
                     <label for="tipo">Tipo:</label>
-                    <select id="tipo" name="tipo" required>
+                    <select id="tipopqrs" name="tipo" required>
                         <option disabled hidden selected value="">Seleccione una opción</option>
                         <option value="peticion">Petición</option>
                         <option value="queja">Queja</option>
@@ -36,7 +36,7 @@
                 <!-- Campo para ingresar el mensaje con altura fija de 150px -->
                 <div class="form-group">
                     <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="8"
+                    <textarea type="text" id="mensajepqrs" name="mensaje" rows="8"
                         style="height: 150px;" required></textarea>
                 </div>
 
