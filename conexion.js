@@ -38,7 +38,7 @@ app.use(express.json());
 //declarar las variables de un html para el js codificar los datos del html
 app.use(express.urlencoded({ extended: false }));
 
-//////////CONSULTAS
+/////////////////////   CONSULTAS  /////////////////////////////////////////////////////////////////////////////
 //Validar inicio de sesión //Ruta de llegada de datos para el login.
 app.post("/inicio", function (req, res) {
   const datoslogin = req.body;
