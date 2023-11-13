@@ -48,8 +48,18 @@
 
                 <!-- Enlace de "Volver" -->
                 <a href="home">Volver</a>
-
             </form>
+            <% if (typeof formulariocheck !== 'undefined') { %>
+                <div class="error-container" id="error-container">
+                    <!-- Muestra el mensaje de error -->
+                    <h1 class="check"> <%= formulariocheck %> </h1>
+                    <button onclick="ocultarError()">Aceptar</button>
+                </div>
+            <% } %>
+            <script>
+                // funcion de ocultar el div de error de login.
+                ocultarError =()=> document.getElementById("error-container").style.display = "none";
+            </script>
         </div>
     </body>
 </html>
