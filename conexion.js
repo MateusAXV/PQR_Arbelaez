@@ -44,19 +44,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 /////////////////////   CONSULTAS  /////////////////////////////////////////////////////////////////////////////
-
 //Validar inicio de sesión //Ruta de llegada de datos para el login.
 app.post("/inicio", function (req, res) {
-
-  conexion.query("SELECT * FROM tabla_pqrs", function (error, rows) {
-    if (error) {
-      throw error;
-    } else {
-      const datos = rows; 
-      res.render("home", {datos});
-    }
-  });
- 
   const datoslogin = req.body;
   let numdoclogin = datoslogin.cedula_login;
   let contralogin = datoslogin.pass_login;
@@ -68,7 +57,14 @@ app.post("/inicio", function (req, res) {
       throw error;
     } else {
       if (row.length > 0) {
-        res.render("home");
+        conexion.query("SELECT * FROM tabla_pqrs", function (error, rows) {
+          if (error) {
+            throw error;
+          } else {
+            const datos = rows; 
+            res.render("home", {datos});
+          }
+        });
       } else {
         res.render("index", { errorlogin: "Datos no válidos" });
       }
