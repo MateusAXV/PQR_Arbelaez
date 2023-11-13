@@ -24,6 +24,7 @@ app.use(express.static(path.join(__dirname, "/public")));
 app.get("/", (req, res) => {
   res.render("index");
 });
+
 //Ruta de registro
 app.get("/registro", (req, res) => {
   res.render("registro");
@@ -46,12 +47,22 @@ app.use(express.urlencoded({ extended: false }));
 
 //Validar inicio de sesión //Ruta de llegada de datos para el login.
 app.post("/inicio", function (req, res) {
+
+  conexion.query("SELECT * FROM tabla_pqrs", function (error, rows) {
+    if (error) {
+      throw error;
+    } else {
+      const datos = rows; 
+      res.render("home", {datos});
+    }
+  });
+ 
   const datoslogin = req.body;
   let numdoclogin = datoslogin.cedula_login;
-  let contralogin = datoslogin.pass_login;  
+  let contralogin = datoslogin.pass_login;
 
-  let LoginQuery = `SELECT Numero_documento, Contraseña FROM registros WHERE Numero_documento = '${numdoclogin}' AND Contraseña = '${contralogin}';`;
-  
+  let LoginQuery = `SELECT Numero_documento, Contraseña FROM registros WHERE Numero_documento = '${numdoclogin}' AND Contraseña = '${contralogin}'`;
+
   conexion.query(LoginQuery, function (error, row) {
     if (error) {
       throw error;
@@ -76,7 +87,7 @@ app.post("/registrar", function (req, res) {
   let celular = datosregistro.celular;
   let contra = datosregistro.passwordlogin;
 
-  let buscarprimarykey = `SELECT * FROM registros WHERE Numero_documento = ${numdoc}`;
+  let buscarprimarykey = `SELECT * FROM registros WHERE Numero_documento = ${numdoc};`
 
   conexion.query(buscarprimarykey, function (error, row) {
     if (error) {
@@ -105,8 +116,8 @@ app.post("/registrar", function (req, res) {
           if (error) {
             throw error;
           } else {
-            res.render("registro",{check:"Registro exitoso"});
-            }
+            res.render("registro", { check: "Registro exitoso" });
+          }
         });
       }
     }
@@ -133,8 +144,13 @@ app.post("/enviarformulario", function (req, res) {
     if (error) {
       throw error;
     } else {
-      console.log("Datos almacenados"); //registro guardado con exito
+      res.render("formulario", {formulariocheck: "Datos del formulario completados"});
     }
   });
 });
 
+// Control de errores de peticiones.
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Algo salió mal!');
+});

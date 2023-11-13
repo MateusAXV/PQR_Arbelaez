@@ -40,15 +40,16 @@
             </tr>
           </thead>
           <tbody>
-            <% if (typeof resultado !== 'undefined') {
-            resultado.forEach((tabla_pqrs) => { %>
-            <tr>
-              <td><% tabla_pqrs.ID %></td>
-              <td><% tabla_pqrs.Tipo_pqrs %></td>
-              <td><% tabla_pqrs.Asunto %></td>
-              <td><% tabla_pqrs.Mensaje %></td>
-            </tr>
-            <% }); } %>
+            <% if (typeof datos !== 'undefined' && datos.length > 0) { %>
+              <% datos.forEach((fila) => { %>
+                <tr>
+                  <td><p><%= fila.ID %>       </p></td>
+                  <td><p><%= fila.Tipo_Pqrs %></p></td>
+                  <td><p><%= fila.Asunto %>   </p></td>
+                  <td><p><%= fila.Mensaje %>  </p></td>
+                </tr>
+              <% }); %>
+            <% } %>            
           </tbody>
         </table>
       </div>
