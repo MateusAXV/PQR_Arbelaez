@@ -1,63 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Enlazar el archivo CSS para aplicar estilos -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Página de Inicio</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Contenedor principal para la página de inicio con dos columnas -->
     <div class="home-container">
-        <!-- Columna izquierda con los tres botones alineados verticalmente -->
-        <div class="left-column">
-            <!-- Enlace para ir al formulario de creación de PQRS -->
-            <a href="formulario"><button id="crear-btn">Crear PQRS</button></a>
-            <!-- Botón para la opción "admins" -->
-            <a href="admins.html" id="admin-btn" class="vertical-button">Administrativos</a>
-            <!-- Botón para la opción "Acerca de" -->
-            <a href="about.html" id="about-btn" class="vertical-button">Acerca de</a>
-            <!-- Enlace para regresar al index -->
-            <a href="/" id="salir-btn" class="vertical-button">Salir</a>
-        </div>
-        <!-- Columna derecha con la tabla y otros elementos -->
-        <div class="right-column">
-            
-
-            <!-- Tabla para mostrar información de PQRS con 15 filas en blanco -->
-            <table>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>tipo</th>
-                        <th>Asunto</th>
-                        <th>Revisado</th>
-                        <th>Respuesta</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Fila 1 -->
-                    <tr>
-                        <td>1</td>
-                        <td>Queja</td>
-                        <td>Huecos en la via</td>
-                        <td>✖️</td>
-                        <td><a href="consultar.html">🔍</a></td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Queja</td>
-                        <td>Huecos en los muros</td>
-                        <td>✔️</td>
-                        <td><a href="consultar.html">👁️</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+      <!-- Columna izquierda con los tres botones alineados verticalmente -->
+      <div class="left-column">
+        <!-- Enlace para ir al formulario de creación de PQRS -->
+        <a href="formulario"><button id="crear-btn">Crear PQRS</button></a>
+        <!-- Botón para la opción "admins" -->
+        <a href="admins.html" id="admin-btn" class="vertical-button"
+          >Administrativos</a
+        >
+        <!-- Botón para la opción "Acerca de" -->
+        <a href="about.html" id="about-btn" class="vertical-button"
+          >Acerca de</a
+        >
+        <!-- Enlace para regresar al index -->
+        <a href="/" id="salir-btn" class="vertical-button">Salir</a>
+      </div>
+      <!-- Columna derecha con la tabla y otros elementos -->
+      <div class="right-column">
+        <!-- Tabla para mostrar información de PQRS con 15 filas en blanco -->
+        <table id="Tabla-usuarios">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Tipo_pqrs</th>
+              <th>Asunto</th>
+              <th>Mensaje</th>
+              <!-- <th>Respuesta</th> -->
+            </tr>
+          </thead>
+          <tbody>
+            <% if (typeof resultado !== 'undefined') {
+            resultado.forEach((tabla_pqrs) => { %>
+            <tr>
+              <td><% tabla_pqrs.ID %></td>
+              <td><% tabla_pqrs.Tipo_pqrs %></td>
+              <td><% tabla_pqrs.Asunto %></td>
+              <td><% tabla_pqrs.Mensaje %></td>
+            </tr>
+            <% }); } %>
+          </tbody>
+        </table>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
