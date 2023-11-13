@@ -69,10 +69,12 @@
         </div>
     <% } %>
     <% if (typeof check !== 'undefined') { %>
-        <div class="check-container" id="check-container">
-            <%= check %>
+        <div class="error-container" id="error-container">
+            <h1 class="check"> <%= check %> </h1>
+            <button onclick="ocultarError()">Aceptar</button>
         </div>
     <% } %>
+    
     <script>
         // funcion de ocultar el div de cédula repetida
         ocultarError =()=> document.getElementById("error-container").style.display = "none";

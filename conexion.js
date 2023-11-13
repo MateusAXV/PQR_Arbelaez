@@ -1,4 +1,3 @@
-const { error } = require("console");
 const express = require("express");
 const mysql = require("mysql");
 
@@ -106,12 +105,8 @@ app.post("/registrar", function (req, res) {
           if (error) {
             throw error;
           } else {
-            res.render("verificacion", { check: "¡Registro exitoso!" });
-            // Agregamos un retraso de 3 segundos antes de redirigir
-            setTimeout(() => {
-              res.redirect("/"); // Puedes redirigir a la página principal o a otra página después de un registro exitoso
-            }, 3000);
-          }
+            res.render("registro",{check:"Registro exitoso"});
+            }
         });
       }
     }
