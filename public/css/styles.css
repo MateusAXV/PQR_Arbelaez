@@ -100,6 +100,7 @@ textarea {
     /* Agrega una barra de desplazamiento cuando el contenido excede el tamaño */
     color: #000;
 }
+
 /* =======================================LOGIN============================================== */
 
 .login-container {
@@ -157,7 +158,8 @@ textarea {
 /* =======================================REGISTRO============================================== */
 
 .registration-container,
-.error-container {
+.error-container,
+.check-container {
     position: relative;
     background-color: transparent;
     padding: 30px 40px;
@@ -182,12 +184,13 @@ textarea {
     text-decoration: underline;
 }
 
-.error-container{
+.error-container,
+.check-container {
     position: absolute;
     width: 300px;
 }
 
-.error-container button{
+.error-container button {
     padding: .5rem 1rem;
 }
 
@@ -222,6 +225,7 @@ textarea {
     margin-right: 1rem;
     transition: transform 200ms;
 }
+
 .left-column button:hover {
     transform: scale(1.05);
 }
@@ -239,7 +243,7 @@ textarea {
     transition: transform 200ms;
 }
 
-.left-column .vertical-button:hover{
+.left-column .vertical-button:hover {
     background-color: rgb(212, 138, 0);
     transform: scale(1.05);
 }
@@ -341,7 +345,7 @@ th {
     justify-content: space-between;
 }
 
-.pqrs-view-container form{
+.pqrs-view-container form {
     width: 100%;
 }
 
@@ -352,38 +356,23 @@ th {
 .pqrs-view-container a {
     color: rgb(255, 166, 0);
 }
+
 .pqrs-view-container a:hover {
     text-decoration: underline;
 }
 
 /* Check */
 
-.check-container {
-    width: 100px;
-    display: none;
-    background-color: #4CAF50; /* Fondo verde */
-    color: #fff; /* Texto blanco */
+.check-container a {
+    background-color: rgb(255, 255, 255);
+    color: rgb(34, 34, 34);
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
     padding: 10px;
-    margin: 10px 0;
-    animation: slideInRight 0.5s forwards, slideOutLeft 0.5s 2.5s forwards;
 }
 
-/* Animación de entrada desde la izquierda */
-@keyframes slideInRight {
-    from {
-        margin-left: -100%;
-    }
-    to {
-        margin-left: 0;
-    }
-}
-
-/* Animación de salida hacia la izquierda después de 2.5 segundos */
-@keyframes slideOutLeft {
-    from {
-        margin-left: 0;
-    }
-    to {
-        margin-left: -100%;
-    }
+/* Fondo con tonalidad verde, si no gusta este estilo borrar todo el checkcontainer de a contnuacion */
+.check-container {
+    background: linear-gradient(rgba(0, 255, 0, 0.25), rgba(0, 255, 0, 0.25)), transparent;
 }
