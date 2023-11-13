@@ -355,3 +355,35 @@ th {
 .pqrs-view-container a:hover {
     text-decoration: underline;
 }
+
+/* Check */
+
+.check-container {
+    width: 100px;
+    display: none;
+    background-color: #4CAF50; /* Fondo verde */
+    color: #fff; /* Texto blanco */
+    padding: 10px;
+    margin: 10px 0;
+    animation: slideInRight 0.5s forwards, slideOutLeft 0.5s 2.5s forwards;
+}
+
+/* Animación de entrada desde la izquierda */
+@keyframes slideInRight {
+    from {
+        margin-left: -100%;
+    }
+    to {
+        margin-left: 0;
+    }
+}
+
+/* Animación de salida hacia la izquierda después de 2.5 segundos */
+@keyframes slideOutLeft {
+    from {
+        margin-left: 0;
+    }
+    to {
+        margin-left: -100%;
+    }
+}
