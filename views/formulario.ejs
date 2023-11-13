@@ -29,7 +29,7 @@
                 <!-- Campo para el nombre del remitente -->
                 <div class="form-group">
                     <label for="asunto">Asunto:</label>
-                    <input type="text" id="asunto" name="asunto"
+                    <input autocomplete="off" type="text" id="asunto" name="asunto"
                         placeholder="Agregue un titulo breve para su PQR" required>
                 </div>
 
@@ -45,11 +45,13 @@
 
                 <!-- Divisor para separar los botones -->
                 <div style="margin-top: 10px;"></div>
-
-                <!-- Enlace de "Volver" -->
-                <button type="submit" formaction="/llenartabla" formmethod="post">Volver</button>
-                <!-- <a href="home">Volver</a> -->
+                
             </form>
+            
+            <form action="llenartabla" method="post">  <!-- Botón para volver al inicio -->
+                <button type="submit">Volver</button> 
+              </form>
+
             <% if (typeof formulariocheck !== 'undefined') { %>
                 <div class="error-container" id="error-container">
                     <!-- Muestra el mensaje de error -->

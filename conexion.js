@@ -38,7 +38,6 @@ app.get("/formulario", (req, res) => {
   res.render("formulario");
 });
 
-
 // se usan para codificar los datos que mandan los html
 app.use(express.json());
 //declarar las variables de un html para el js codificar los datos del html
@@ -46,7 +45,7 @@ app.use(express.urlencoded({ extended: false }));
 
 /////////////////////   CONSULTAS  /////////////////////////////////////////////////////////////////////////////
 
-app.post("/llenartabla", function (req, res){
+app.post("/llenartabla", function(req,res){
   conexion.query("SELECT * FROM tabla_pqrs", function (error, rows) {
     if (error) {
       throw error;
@@ -55,7 +54,7 @@ app.post("/llenartabla", function (req, res){
       res.render("home", {datos});
     }
   });
-})
+});
 
 //Validar inicio de sesión //Ruta de llegada de datos para el login.
 app.post("/inicio", function (req, res) {
