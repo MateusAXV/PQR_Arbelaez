@@ -68,7 +68,6 @@ app.post("/inicio", function (req, res) {
 // Ruta para poder ingresar los datos
 app.post("/registrar", function (req, res) {
   const datosregistro = req.body;
-
   let tipdoc = datosregistro.tipodoc;
   let numdoc = datosregistro.numerodoc;
   let nombCo = datosregistro.nombreregistro;
@@ -105,8 +104,11 @@ app.post("/registrar", function (req, res) {
           if (error) {
             throw error;
           } else {
-            console.log("Datos almacenados");
-            res.redirect("/"); // Puedes redirigir a la página principal o a otra página después de un registro exitoso
+            res.render("verificacion", { check: "¡Registro exitoso!" });
+            // Agregamos un retraso de 3 segundos antes de redirigir
+            setTimeout(() => {
+              res.redirect("/"); // Puedes redirigir a la página principal o a otra página después de un registro exitoso
+            }, 3000);
           }
         });
       }
