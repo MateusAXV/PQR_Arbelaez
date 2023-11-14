@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Formulario de Registro</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="registration-container">
+        <h1>Formulario de Registro</h1> <!-- Título del formulario -->
+        <form autocomplete="off" action="/registrar" method="post">
+            <!-- Campo para el nombre de usuario -->
+            <div class="form-group">
+                <label for="nombre-usuario">Tipo de documento:</label>
+                <select id="tipodoc" name="tipodoc" required>
+                    <option disabled hidden selected value="">Seleccione una opción</option>
+                    <option value="TI">Tarjeta de Identidad</option>
+                    <option value="CC">Cédula de Ciudadanía</option>
+                    <option value="CE">Cédula extranjera</option>
+                </select>
+                <!-- <input type="text" id="nombre-usuario" name="nombre-usuario" placeholder="Nombre de usuario" required> -->
+            </div>
+            <!-- Campo para el número de cédula/tarjeta -->
+            <div class="form-group">
+                <label for="number">Número de C.C/T.I:</label>
+                <input type="number" id="numerodoc" name="numerodoc" placeholder="Ingresa el numero" required>
+            </div>
+
+            <!-- Campo para el nombre completo -->
+            <div class="form-group">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombreregistro" name="nombreregistro" placeholder="Ingresa tu nombre completo"
+                    required>
+            </div>
+
+            <!-- Campo para el correo electrónico -->
+            <div class="form-group">
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" placeholder="correo@outlook.com" required>
+            </div>
+
+            <!-- Campo para el número de teléfono -->
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="celular" name="celular" placeholder="Ingresa tu número de teléfono" required>
+            </div>
+
+            <!-- Campo para crear la contraseña nueva (4 números) -->
+            <div class="form-group">
+                <label for="password">Crear nueva contraseña:</label>
+                <input type="password" id="passwordlogin" name="passwordlogin"
+                    placeholder="Crea una contraseña de 4 números" required>
+            </div>
+
+            <!-- Botón para enviar el formulario de registro -->
+            <button type="submit">Registrar</button>
+            <!-- Enlace "Volver" para regresar a la página de inicio -->
+            <a href="/">Volver</a>
+        </form>
+        <!-- esta parte es para el recuadro de error de la cédula registrada -->
+    </div>
+    <% if (typeof error !=='undefined' ) { %>
+        <div class="error-container" id="error-container">
+            <!-- Muestra el mensaje de error -->
+            <h1 class="error">
+                <%= error %>
+            </h1>
+            <button onclick="ocultarError()">Aceptar</button>
+        </div>
+    <% } %>
+    <% if (typeof check !=='undefined' ) { %>
+        <div class="check-container" id="check-container">
+            <h1 class="check">
+                <%= check %>
+            </h1>
+            <a href="/">Iniciar sesión</a>
+        </div>
+    <% } %>
+
+    <script>
+        // funcion de ocultar el div de cédula repetida
+        ocultarError = () => document.getElementById("error-container").style.display = "none";
+    </script>
+</body>
+
+</html>
