@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Enlazar el archivo CSS para aplicar estilos -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Página de Inicio</title>
+  </head>
+
+  <body>
+    <!-- Contenedor principal para la página de inicio con dos columnas -->
+    <div class="home-container">
+      <!-- Columna izquierda con los tres botones alineados verticalmente -->
+      <div class="left-column">
+        <!-- Enlace para ir al formulario de creación de PQRS -->
+        <a href="formulario" class="crear-a"><button id="crear-btn">Crear PQRS</button></a>
+        <!-- Botón para la opción "admins" -->
+        <a href="admins.html" id="admin-btn" class="vertical-button" >Administrativos</a>
+        <!-- Botón para la opción "Acerca de" -->
+        <a href="about.html" id="about-btn" class="vertical-button">Acerca de</a>
+        <!-- Enlace para regresar al index -->
+        <a href="/" id="salir-btn" class="vertical-button">Salir</a>
+      </div>
+      <!-- Columna derecha con la tabla y otros elementos -->
+      <div class="right-column">
+        <!-- Tabla para mostrar información de PQRS con 15 filas en blanco -->
+        <table id="Tabla-usuarios">
+          <thead>
+            <tr>
+              <th class="column-table-1">ID</th>
+              <th class="column-table-2">Tipo_pqrs</th>
+              <th class="column-table-3">Asunto</th>
+              <th class="column-table-4">Mensaje</th>
+              <!-- <th>Respuesta</th> -->
+            </tr>
+          </thead>
+          <tbody>
+            <% if (typeof datos !== 'undefined' && datos.length > 0) { %>
+              <% datos.forEach((fila) => { %>
+                <tr>
+                  <td><p><%= fila.ID %>       </p></td>
+                  <td><p><%= fila.Tipo_Pqrs %></p></td>
+                  <td><p><%= fila.Asunto %>   </p></td>
+                  <td><p><%= fila.Mensaje %>  </p></td>
+                </tr>
+              <% }); %>
+            <% } %>            
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

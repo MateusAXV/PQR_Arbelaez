@@ -1,0 +1,419 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+}
+
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(../img/bg-index.jpg);
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    outline: none;
+}
+
+input::placeholder {
+    color: rgb(255, 255, 255);
+}
+
+
+button {
+    background-color: rgb(255, 255, 255);
+    color: rgb(34, 34, 34);
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+button:hover {
+    background-color: rgb(205, 205, 205);
+}
+
+p {
+    font-size: .9rem;
+    color: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+
+select {
+    background: transparent;
+    padding: 0.3rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    width: 60%;
+}
+
+select option {
+    background: #fff;
+    color: #555;
+    border: none;
+    padding: 0.2rem;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+textarea {
+    width: 500px;
+    /* Ancho fijo de 500 píxeles */
+    height: 450px;
+    /* Altura fija de 500 píxeles */
+    resize: both;
+    /* Permite redimensionar la caja en ambas direcciones */
+    overflow: auto;
+    /* Agrega una barra de desplazamiento cuando el contenido excede el tamaño */
+    color: #000;
+}
+
+/* =======================================LOGIN============================================== */
+
+.login-container {
+    position: relative;
+    background-color: transparent;
+    padding: 30px 40px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 360px;
+    backdrop-filter: blur(15px);
+}
+
+.login-container a {
+    color: rgb(255, 166, 0);
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para los grupos de formularios (Usuario y Contraseña) */
+.form-group {
+    position: relative;
+    margin-bottom: 15px;
+    text-align: left;
+    width: 100%;
+}
+
+/* Estilos para los campos de entrada */
+.form-group input {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* iconos */
+.form-group i {
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    transform: translateY(10%);
+}
+
+
+/* Estilos para el botón de inicio de sesión */
+.login-container button {
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+
+/* =======================================REGISTRO============================================== */
+
+.registration-container,
+.error-container,
+.check-container {
+    position: relative;
+    background-color: transparent;
+    padding: 30px 40px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 500px;
+    backdrop-filter: blur(15px);
+}
+
+.registration-container button {
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+.registration-container a {
+    color: rgb(255, 166, 0);
+}
+
+.registration-container a:hover {
+    text-decoration: underline;
+}
+
+.error-container,
+.check-container {
+    position: absolute;
+    width: 300px;
+}
+
+.error-container button {
+    padding: .5rem 1rem;
+}
+
+/* =======================================HOME============================================== */
+
+/* Estilos adicionales para el contenedor principal y la columna derecha */
+.home-container {
+    display: flex;
+    position: relative;
+    padding: 60px 40px;
+    width: 80%;
+    min-height: 50vh;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    justify-content: space-between;
+    max-height: 70vh;
+}
+
+.home-container .left-column {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-column .crear-a {
+    width: 70%;
+    margin-bottom: 1rem;
+    height: 50px;
+}
+
+.left-column button {
+    padding: .5rem;
+    margin-right: 1rem;
+    transition: transform 200ms;
+    width: 100%;
+    height: 100%;
+}
+
+.left-column button:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para los botones de la columna izquierda */
+.left-column .vertical-button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: rgb(255, 166, 0);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: 150px;
+    transition: transform 200ms;
+}
+
+.left-column .vertical-button:hover {
+    background-color: rgb(212, 138, 0);
+    transform: scale(1.05);
+}
+
+.home-container .right-column {
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: auto;
+}
+
+/* Estilos para la tabla */
+table {
+    max-width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+table,
+th,
+td {
+    border: 2px solid rgba(255, 255, 255, 1);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.column-table-1{
+    max-width: 50px;
+}
+.column-table-3{
+    max-width: 250px;
+}
+.column-table-1{
+    max-width: 150px;
+}
+.column-table-1{
+    max-width: 450px;
+}
+
+/* =======================================ABOUT============================================== */
+
+.about-container {
+    position: relative;
+    background-color: transparent;
+    padding: 30px 40px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 500px;
+    height: 300px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about-container button {
+    background-color: rgb(255, 255, 255);
+    color: rgb(34, 34, 34);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.about-container button:hover {
+    background-color: rgb(205, 205, 205);
+    text-decoration: none;
+}
+
+/* =======================================USERS============================================== */
+
+.users-container,
+.admins-container,
+.pqrs-view-container {
+    width: 60%;
+    position: relative;
+    background-color: transparent;
+    padding: 30px 40px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    backdrop-filter: blur(15px);
+}
+
+.admins-container{
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+
+.admins-container::-webkit-scrollbar{
+    display: none;
+}
+
+.users-container button,
+.admins-container button {
+    margin: 0 22vw;
+    padding: 0.5rem;
+}
+
+/* =======================================CONSULTAS============================================ */
+
+.pqrs-view-container {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pqrs-view-container form {
+    width: 100%;
+}
+
+.pqrs-view-container button {
+    padding: 10px;
+}
+
+.pqrs-view-container a {
+    color: rgb(255, 166, 0);
+}
+
+.pqrs-view-container a:hover {
+    text-decoration: underline;
+}
+
+
+/* =======================================ADMINS============================================ */
+
+.admins-container button{
+    margin-bottom: 1rem;
+}
+
+
+/* =======================================REGISTRO CHECK============================================ */
+
+.check-container a {
+    background-color: rgb(255, 255, 255);
+    color: rgb(34, 34, 34);
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+/* Fondo con tonalidad verde, si no gusta este estilo borrar todo el checkcontainer de a contnuacion */
+.check-container {
+    background: linear-gradient(rgba(0, 255, 0, 0.25), rgba(0, 255, 0, 0.25)), transparent;
+}
+
+.login-error{
+    background: linear-gradient(rgba(255, 0, 0, 0.3), rgba(255, 0, 0, 0.3)), transparent;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlazar el archivo CSS para aplicar estilos -->
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <title>Iniciar Sesión</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- Contenedor principal para el formulario de inicio de sesión -->
+    <div class="login-container">
+        <h1>Login</h1>
+        <!-- Formulario de inicio de sesión -->
+        <form autocomplete="off" action="/inicio" method="post">
+            <div class="form-group">
+                <label for="username">Usuario:</label>
+                <!-- Campo de entrada para el nombre de usuario -->
+                <input autocomplete="off" type="text" id="cedula_login" name="cedula_login" placeholder="Numero de cédula" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <!-- Campo de entrada para la contraseña -->
+                <input autocomplete="off" type="password" id="pass_login" name="pass_login" placeholder="Contraseña" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+
+            <!-- Botón para enviar el formulario -->
+            <button type="submit">Entrar</button>
+        </form>
+        
+        <script>
+            // funcion de ocultar el div de error de login.
+            ocultarError =()=> document.getElementById("error-container").style.display = "none";
+        </script>
+        <!-- Enlace para registrarse (debe vincularse a la página de registro) -->
+        <p>¿No tienes una cuenta? <a href="/registro">Regístrate</a></p>
+    </div>
+    <% if (typeof errorlogin !== 'undefined') { %>
+        <div class="error-container login-error" id="error-container">
+            <!-- Muestra el mensaje de error -->
+            <h1 class="error"> <%= errorlogin %> </h1>
+            <button onclick="ocultarError()" >Aceptar</button>
+        </div>
+    <% } %>
+</body>
+
+</html>

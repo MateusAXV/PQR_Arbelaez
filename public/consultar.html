@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Enlazar el archivo CSS para aplicar estilos -->
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Visualizar PQRS</title>
+    </head>
+    <body>
+        <!-- Contenedor principal para visualizar PQRS y responder -->
+        <div class="pqrs-view-container">
+            <h1>Visualizar PQRS</h1> <!-- Título de la página -->
+
+            <!-- Información del PQRS -->
+            <div class="pqrs-info">
+                <h2>Información de la Solicitud</h2>
+
+                <!-- Datos del PQRS -->
+                <p><strong>ID del PQRS:</strong> PQRS-12345</p>
+                <p><strong>Tipo:</strong> Petición</p>
+                <p><strong>Nombre del Remitente:</strong> Juan Pérez</p>
+                <p><strong>Correo Electrónico:</strong> juan@example.com</p>
+                <p><strong>Tipo de Documento:</strong> Cédula de Ciudadanía</p>
+                <p><strong>Número de Documento:</strong> 123456789</p>
+                <p><strong>Teléfono:</strong> 123-456-7890</p>
+                <p><strong>Mensaje:</strong> Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit</p>
+            </div>
+
+            <!-- Formulario de respuesta al PQRS -->
+            <form>
+                <h2>Responder al PQRS</h2>
+                <!-- Campo para ingresar la respuesta con un ancho de 500px -->
+                <div class="form-group">
+                    <textarea id="respuesta" name="respuesta" rows="8"
+                        style="width: 500px; height: 150px;" required></textarea>
+                </div>
+
+                <!-- Botón para enviar la respuesta -->
+                <button type="submit">Enviar Respuesta</button>
+
+                <!-- Divisor para separar los botones -->
+                <div style="margin-top: 10px;"></div>
+
+                <!-- Enlace de "Volver" -->
+                <a href="home">Volver</a>
+            </form>
+        </div>
+    </body>
+</html>

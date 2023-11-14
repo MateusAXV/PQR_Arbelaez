@@ -1,0 +1,160 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+}
+
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(../img/bg-index.jpg);
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    outline: none;
+    padding: 0.3rem;
+    width: 100%;
+    border-radius: 5px;
+}
+
+input::placeholder {
+    color: rgb(255, 255, 255);
+}
+
+
+button {
+    background-color: rgb(255, 255, 255);
+    color: rgb(34, 34, 34);
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 0 100px;
+}
+
+button:hover {
+    background-color: rgb(205, 205, 205);
+}
+
+p {
+    font-size: .9rem;
+    color: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+select {
+    background: transparent;
+    padding: 0.3rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    width: 60%;
+}
+
+select option {
+    background: #fff;
+    color: #555;
+    border: none;
+    padding: 0.2rem;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+a {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+textarea {
+    width: 500px;
+    /* Ancho fijo de 500 píxeles */
+    height: 450px;
+    /* Altura fija de 500 píxeles */
+    resize: both;
+    /* Permite redimensionar la caja en ambas direcciones */
+    overflow: auto;
+    /* Agrega una barra de desplazamiento cuando el contenido excede el tamaño */
+    color: #fff;
+    display: block;
+    background: transparent;
+}
+
+/* =======================================FORM============================================== */
+
+.pqrs-container{
+    position: relative;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group{
+    margin-bottom: 20px;
+}
+
+.pqrs-container a {
+    color: rgb(255, 166, 0);
+}
+
+.pqrs-container a:hover {
+    text-decoration: underline;
+}
+
+.error-container{
+    top: 43vh;
+    background: linear-gradient(rgba(0, 255, 0, 0.2), rgba(0, 255, 0, 0.2)), transparent;
+    padding: 30px 40px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    backdrop-filter: blur(15px);
+    position: absolute;
+    width: 400px;
+}
+.error-container h1{
+    color: #fff;
+}
+
+.error-container button{
+    color: #444;
+    background-color: #fff;
+}
+
+.error-container button:hover{
+    background-color: rgb(205, 205, 205);
+}
