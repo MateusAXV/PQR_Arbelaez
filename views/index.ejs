@@ -41,7 +41,7 @@
         <p>¿No tienes una cuenta? <a href="/registro">Regístrate</a></p>
     </div>
     <% if (typeof errorlogin !== 'undefined') { %>
-        <div class="error-container" id="error-container">
+        <div class="error-container login-error" id="error-container">
             <!-- Muestra el mensaje de error -->
             <h1 class="error"> <%= errorlogin %> </h1>
             <button onclick="ocultarError()" >Aceptar</button>

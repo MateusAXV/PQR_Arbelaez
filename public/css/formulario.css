@@ -12,7 +12,7 @@ body {
     font-family: Arial, sans-serif;
     background-image: url(../img/bg-index.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: top;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,8 +103,9 @@ textarea {
     /* Permite redimensionar la caja en ambas direcciones */
     overflow: auto;
     /* Agrega una barra de desplazamiento cuando el contenido excede el tamaño */
-    color: #000;
+    color: #fff;
     display: block;
+    background: transparent;
 }
 
 /* =======================================FORM============================================== */
@@ -135,7 +136,7 @@ textarea {
 
 .error-container{
     top: 43vh;
-    background: linear-gradient(rgba(0, 255, 0, 0.3), rgba(0, 255, 0, 0.3)), transparent;
+    background: linear-gradient(rgba(0, 255, 0, 0.2), rgba(0, 255, 0, 0.2)), transparent;
     padding: 30px 40px;
     border-radius: 10px;
     border: 2px solid rgba(255, 255, 255, 0.5);
@@ -146,14 +147,14 @@ textarea {
     width: 400px;
 }
 .error-container h1{
-    color: #000;
+    color: #fff;
 }
 
 .error-container button{
-    color: #fff;
-    background-color: #444;
+    color: #444;
+    background-color: #fff;
 }
 
 .error-container button:hover{
-    background-color: #222;
+    background-color: rgb(205, 205, 205);
 }
