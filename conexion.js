@@ -1,15 +1,17 @@
 const express = require("express");
+const { createPool } = require("mysql");
+
 const mysql = require("mysql");
 
 const app = express();
 
 const path = require("path");
 
-let conexion = mysql.createConnection({
-  host: "localhost",
-  database: "pqrs_db",
+const Pool = createPool({
+  host: "mysqldb",
   user: "root",
   password: "",
+  port: 3307
 });
 
 app.listen(3000, function () {

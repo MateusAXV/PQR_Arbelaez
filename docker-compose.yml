@@ -1,0 +1,17 @@
+version: '24.0.6'
+services:
+  app:
+    build:
+    depends_on:
+      - mysqldb
+    links:
+      - mysqldb
+    ports:
+      - 3000:3000
+  mysqldb:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: pqrs_db
+    ports:
+      - 3007:3006
