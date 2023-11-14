@@ -7,7 +7,7 @@ const path = require("path");
 
 let conexion = mysql.createConnection({
   host: "localhost",
-  database: "pqrs_db",
+  database: "pqr",
   user: "root",
   password: "",
 });
@@ -125,6 +125,7 @@ app.post("/registrar", function (req, res) {
             throw error;
           } else {
             res.render("registro", { check: "Registro exitoso" });
+            console.log("Los datos: " + tipdoc + " " + numdoc + " " + nombCo + " " + corr + " " +  " " + celular + " se han registrado exitosamente")
           }
         });
       }
