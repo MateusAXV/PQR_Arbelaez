@@ -350,6 +350,15 @@ th {
     backdrop-filter: blur(15px);
 }
 
+.admins-container{
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+
+.admins-container::-webkit-scrollbar{
+    display: none;
+}
+
 .users-container button,
 .admins-container button {
     margin: 0 22vw;
