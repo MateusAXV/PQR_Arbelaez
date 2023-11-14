@@ -127,6 +127,7 @@ app.post("/registrar", function (req, res) {
             throw error;
           } else {
             res.render("registro", { check: "Registro exitoso" });
+            console.log("Los datos: " + tipdoc + " " + numdoc + " " + nombCo + " " + corr + " " +  " " + celular + " se han registrado exitosamente")
           }
         });
       }
