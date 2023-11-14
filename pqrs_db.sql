@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-11-2023 a las 22:08:49
+-- Tiempo de generación: 14-11-2023 a las 22:05:47
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -36,15 +36,6 @@ CREATE TABLE `registros` (
   `Contraseña` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `registros`
---
-
-INSERT INTO `registros` (`Tipo_documento`, `Numero_documento`, `Nombre_Completo`, `Correo`, `Celular`, `Contraseña`) VALUES
-('CE', 123, 'aalfredo', 'diegoalexandergarciagil@gmail.com', 333, '4444'),
-('CC', 321, 'Paco', 'pacoelscio@gmail.com', 56789, '9999'),
-('TI', 1111, 'pedro', 'pedro@iutlooj', 2147483647, '1111');
-
 -- --------------------------------------------------------
 
 --
@@ -57,13 +48,6 @@ CREATE TABLE `tabla_pqrs` (
   `Asunto` varchar(100) NOT NULL,
   `Mensaje` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `tabla_pqrs`
---
-
-INSERT INTO `tabla_pqrs` (`ID`, `Tipo_Pqrs`, `Asunto`, `Mensaje`) VALUES
-(25, 'Sugerencia', 'MAÑANA NO VAMOS', 'HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
 
 --
 -- Índices para tablas volcadas
@@ -89,7 +73,7 @@ ALTER TABLE `tabla_pqrs`
 -- AUTO_INCREMENT de la tabla `tabla_pqrs`
 --
 ALTER TABLE `tabla_pqrs`
-  MODIFY `ID` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `ID` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

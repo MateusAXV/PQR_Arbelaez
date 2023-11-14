@@ -7,7 +7,7 @@ const path = require("path");
 
 let conexion = mysql.createConnection({
   host: "localhost",
-  database: "pqr",
+  database: "pqrs_db",
   user: "root",
   password: "",
 });
