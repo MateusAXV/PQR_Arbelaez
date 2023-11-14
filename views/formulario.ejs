@@ -1,68 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Enlazar el archivo CSS para aplicar estilos -->
-        <link rel="stylesheet" href="css/formulario.css">
-        <title>Formulario PQRS</title>
-    </head>
-    <body>
-        <!-- Contenedor principal para el formulario de PQRS -->
-        <div class="pqrs-container">
-            <h1>Formulario PQRS</h1> <!-- Título del formulario -->
 
-            <!-- Formulario de PQRS -->
-            <form action="/enviarformulario" method="post">
-                <!-- Campo para seleccionar el tipo de solicitud -->
-                <div class="form-group">
-                    <label for="tipo">Tipo:</label>
-                    <select id="tipopqrs" name="tipopqrs" required>
-                        <option disabled hidden selected value="">Seleccione una opción</option>
-                        <option value="Peticion">Petición</option>
-                        <option value="Queja">Queja</option>
-                        <option value="Reclamo">Reclamo</option>
-                        <option value="Sugerencia">Sugerencia</option>
-                    </select>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlazar el archivo CSS para aplicar estilos -->
+    <link rel="stylesheet" href="css/formulario.css">
+    <title>Formulario PQRS</title>
+</head>
 
-                <!-- Campo para el nombre del remitente -->
-                <div class="form-group">
-                    <label for="asunto">Asunto:</label>
-                    <input autocomplete="off" type="text" id="asunto" name="asunto"
-                        placeholder="Agregue un titulo breve para su PQR" required>
-                </div>
+<body>
+    <!-- Contenedor principal para el formulario de PQRS -->
+    <div class="pqrs-container">
+        <h1>Formulario PQRS</h1> <!-- Título del formulario -->
 
-                <!-- Campo para ingresar el mensaje con altura fija de 150px -->
-                <div class="form-group">
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea type="text" id="mensajepqrs" name="mensajepqrs" rows="8"
-                        style="height: 150px;" required></textarea>
-                </div>
+        <!-- Formulario de PQRS -->
+        <form action="/enviarformulario" method="post">
+            <!-- Campo para seleccionar el tipo de solicitud -->
+            <div class="form-group">
+                <label for="tipo">Tipo:</label>
+                <select id="tipopqrs" name="tipopqrs" required>
+                    <option disabled hidden selected value="">Seleccione una opción</option>
+                    <option value="Peticion">Petición</option>
+                    <option value="Queja">Queja</option>
+                    <option value="Reclamo">Reclamo</option>
+                    <option value="Sugerencia">Sugerencia</option>
+                </select>
+            </div>
 
-                <!-- Botón para enviar el formulario -->
-                <button type="submit">Enviar</button>
+            <!-- Campo para el nombre del remitente -->
+            <div class="form-group">
+                <label for="asunto">Asunto:</label>
+                <input autocomplete="off" type="text" id="asunto" name="asunto"
+                    placeholder="Agregue un titulo breve para su PQR" required>
+            </div>
 
-                <!-- Divisor para separar los botones -->
-                <div style="margin-top: 10px;"></div>
-                
-            </form>
-            
-            <form action="llenartabla" method="post">  <!-- Botón para volver al inicio -->
-                <button type="submit">Volver</button> 
-              </form>
+            <!-- Campo para ingresar el mensaje con altura fija de 150px -->
+            <div class="form-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea type="text" id="mensajepqrs" name="mensajepqrs" rows="8" style="height: 150px;"
+                    required></textarea>
+            </div>
 
-            <% if (typeof formulariocheck !== 'undefined') { %>
-                <div class="error-container" id="error-container">
-                    <!-- Muestra el mensaje de error -->
-                    <h1 class="check"> <%= formulariocheck %> </h1>
-                    <button onclick="ocultarError()">Aceptar</button>
-                </div>
-            <% } %>
-            <script>
-                // funcion de ocultar el div de error de login.
-                ocultarError =()=> document.getElementById("error-container").style.display = "none";
-            </script>
+            <!-- Botón para enviar el formulario -->
+            <button type="submit">Enviar</button>
+
+            <!-- Divisor para separar los botones -->
+            <div style="margin-top: 10px;"></div>
+
+        </form>
+
+        <form class="button-container" action="llenartabla" method="post"> <!-- Botón para volver al inicio -->
+            <button type="submit">Volver</button>
+        </form>
+
+                <script>
+                    // funcion de ocultar el div de error de login.
+                    ocultarError = () => document.getElementById("error-container").style.display = "none";
+                </script>
+    </div>
+    <% if (typeof formulariocheck !=='undefined' ) { %>
+        <div class="error-container" id="error-container">
+            <!-- Muestra el mensaje de error -->
+            <h1 class="check">
+                <%= formulariocheck %>
+            </h1>
+            <button onclick="ocultarError()">Aceptar</button>
         </div>
-    </body>
+        <% } %>
+</body>
+
 </html>

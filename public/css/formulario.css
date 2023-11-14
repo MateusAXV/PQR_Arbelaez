@@ -55,6 +55,7 @@ button {
     cursor: pointer;
     border-radius: 7px;
     padding: 10px;
+    margin: 0 100px;
 }
 
 button:hover {
@@ -130,4 +131,29 @@ textarea {
 
 .pqrs-container a:hover {
     text-decoration: underline;
+}
+
+.error-container{
+    top: 43vh;
+    background: linear-gradient(rgba(0, 255, 0, 0.3), rgba(0, 255, 0, 0.3)), transparent;
+    padding: 30px 40px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    backdrop-filter: blur(15px);
+    position: absolute;
+    width: 400px;
+}
+.error-container h1{
+    color: #000;
+}
+
+.error-container button{
+    color: #fff;
+    background-color: #444;
+}
+
+.error-container button:hover{
+    background-color: #222;
 }
