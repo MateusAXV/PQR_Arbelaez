@@ -12,7 +12,7 @@ body {
     font-family: Arial, sans-serif;
     background-image: url(../img/bg-index.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: top;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -381,7 +381,15 @@ th {
     text-decoration: underline;
 }
 
-/* Check */
+
+/* =======================================ADMINS============================================ */
+
+.admins-container button{
+    margin-bottom: 1rem;
+}
+
+
+/* =======================================REGISTRO CHECK============================================ */
 
 .check-container a {
     background-color: rgb(255, 255, 255);
@@ -395,4 +403,8 @@ th {
 /* Fondo con tonalidad verde, si no gusta este estilo borrar todo el checkcontainer de a contnuacion */
 .check-container {
     background: linear-gradient(rgba(0, 255, 0, 0.25), rgba(0, 255, 0, 0.25)), transparent;
+}
+
+.login-error{
+    background: linear-gradient(rgba(255, 0, 0, 0.3), rgba(255, 0, 0, 0.3)), transparent;
 }

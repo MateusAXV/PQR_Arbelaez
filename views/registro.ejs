@@ -59,7 +59,7 @@
             <!-- Botón para enviar el formulario de registro -->
             <button type="submit">Registrar</button>
             <!-- Enlace "Volver" para regresar a la página de inicio -->
-            <a href="/">Volver</a>
+            <button onclick="volver()">Volver</button>
         </form>
         <!-- esta parte es para el recuadro de error de la cédula registrada -->
     </div>
@@ -84,6 +84,9 @@
     <script>
         // funcion de ocultar el div de cédula repetida
         ocultarError = () => document.getElementById("error-container").style.display = "none";
+        volver = () => {
+            window.location.href = "/";
+        }
     </script>
 </body>
 
